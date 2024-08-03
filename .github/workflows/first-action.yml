@@ -34,3 +34,12 @@ jobs:
         run: |
           echo "Add other actions to build,"
           echo "test, and deploy your project."
+
+      - name: check out runner environment
+        run: |
+          pwd
+          ls -al ./
+          id
+          df -Tf
+          env | sort
+          which python || which python3
