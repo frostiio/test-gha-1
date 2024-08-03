@@ -40,6 +40,16 @@ jobs:
           pwd
           ls -al ./
           id
-          df -Tf
+          df -Th
           env | sort
           which python || which python3
+
+      - name: git CheckOut repository
+        uses: actions/checkout@v4.1.7
+        
+      - name: do debug check
+        run: |
+          pwd
+          ls -al ./
+
+      
